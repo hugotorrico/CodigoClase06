@@ -7,17 +7,25 @@ class Program
 {
     static void Main()
     {
+
+        Rectangulo rectangulo = new Rectangulo(0, 0, 8, 0, 8, 4, 0, 8);
+        rectangulo.color = "Rojo";
+        rectangulo.CalcularArea();
+        rectangulo.CalcularPerimetro();
+        rectangulo.color = "Verde";
+
+      
+
+
+        /*
         //int[] notas = new int[5];
-        //Estudiante[] estudiantes= new Estudiante[5];
-
+        //Estudiante[] estudiantes= new Estudiante[5];      
         List<Estudiante> estudiantes = new List<Estudiante>();
-
         string Salir = "";
         string? Nombres="";//? : Nullable!!!    
         int Edad=0;
         int Calificacion=0;
-        
-         
+                 
         do
         {
           
@@ -38,7 +46,6 @@ class Program
             Console.WriteLine("Desea Salir?");
             Salir= Console.ReadLine();
 
-
         } while (Salir.ToUpper()!="S");
 
 
@@ -46,7 +53,7 @@ class Program
         {
             Console.WriteLine($"Nombres: {item.Nombres} Edad:{item.Edad} Calificacion: {item.Calificacion} ");
         }
-
+        */
         /*
 
         //Constructor.
