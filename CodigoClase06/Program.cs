@@ -7,6 +7,48 @@ class Program
 {
     static void Main()
     {
+        //int[] notas = new int[5];
+        //Estudiante[] estudiantes= new Estudiante[5];
+
+        List<Estudiante> estudiantes = new List<Estudiante>();
+
+        string Salir = "";
+        string? Nombres="";//? : Nullable!!!    
+        int Edad=0;
+        int Calificacion=0;
+        
+         
+        do
+        {
+          
+            //Leo la información de consola.
+            Console.WriteLine("Ingrese Nombres");
+            Nombres = Console.ReadLine();
+            Console.WriteLine("Ingrese Edad");
+            Edad = Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("Ingrese Calificacion");
+            Calificacion = Convert.ToInt32(Console.ReadLine());
+
+            //Instancio al estudiante
+            Estudiante estudiante= new Estudiante(Nombres,Edad, Calificacion);
+
+            //Lleno mi colección
+            estudiantes.Add(estudiante);
+
+            Console.WriteLine("Desea Salir?");
+            Salir= Console.ReadLine();
+
+
+        } while (Salir.ToUpper()!="S");
+
+
+        foreach (var item in estudiantes)
+        {
+            Console.WriteLine($"Nombres: {item.Nombres} Edad:{item.Edad} Calificacion: {item.Calificacion} ");
+        }
+
+        /*
+
         //Constructor.
         Persona persona = new Persona("Hugo","Torico","Nasca",36,1500);
 
@@ -22,9 +64,6 @@ class Program
 
         // Llamar al método de la estructura
         p1.DisplayPosition();
-
-
-
 
         //NEW: Instanciar     
         Cuadrado cuadrado = new Cuadrado();
@@ -49,9 +88,6 @@ class Program
         calculadora.b = 20;
 
 
-
-
-
         Console.WriteLine("Sumar");
         Console.WriteLine( calculadora.Sumar());
         Console.WriteLine("Restar");
@@ -60,13 +96,7 @@ class Program
         Console.WriteLine(calculadora.Multiplicar());
         Console.WriteLine("Dividir");
         Console.WriteLine(calculadora.Dividir());
-
-
-
-
-
-
-
+        */
         Console.Read();
 
 
